@@ -1,0 +1,10 @@
+{
+  "title": "new-grocery-list",
+  "version": "2.0",
+  "scripts": {
+    "start" : "nodemon backend/server.js",
+    "build" : "webpack -w"
+  },
+  "dependencies" : {},
+  "devDependencies": {}
+}
