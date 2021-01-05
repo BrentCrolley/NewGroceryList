@@ -3,12 +3,12 @@ const express = require('express');
 const router = express.Router();
 
 router
-  .route('/groceries');
+  .route('/groceries')
   .get(controller.getGrocery)
   .post(controller.postGrocery);
 
 router
-  .route('/groceries/:id')
+  .route('/groceries/:_id')
   .delete(controller.deleteGrocery)
   .put(controller.updateGrocery);
 

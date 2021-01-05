@@ -5,14 +5,14 @@ const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
 
-const PORT = 27017;
+const PORT = 3000;
 //make sure to invoke express for when we use app.
 const app = express();
 
-app.use(express.static(path.join(__dirname, '..', 'frontend/src/index.jsx')))
+app.use(express.static(path.join(__dirname, '../', 'frontend/public')))
 app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use('api', router);
+app.use('/api', router);
 
 app.listen(PORT, () =>
 console.log(`Server is listening at localhost:${PORT}`))
